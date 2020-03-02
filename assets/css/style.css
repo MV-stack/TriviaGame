@@ -1,0 +1,38 @@
+body {
+    background-image: url(../images/background.png);
+    background-size: cover;
+    
+}
+
+.jumbotron {
+    background-color: black;
+    background-image: url(../images/jurassicpark-logo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 110px;        
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #000000;
+    color: #ce7827;
+    text-align: center;
+    height: 25px;
+}
+
+@media screen and (max-width: 980px){
+    
+}
+
+
+@media only screen and (max-width: 768px){
+	
+}
+
+
+@media only screen and (max-width: 640px){
+	
+}

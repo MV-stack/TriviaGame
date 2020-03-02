@@ -11,11 +11,43 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>TriviaGame</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-<script>src="assets/javascript/app.js"</script>
+    <!-- JUMBOTRON -->
+    <div class="jumbotron col-sm-12 "></div>
+<!-- End Jumbotron -->
+    <div class="container">
+        <div class="main">
+            <div class="row start-page">
+                <div class="col-sm-12">
+                    <h1>Jurassic Park Trivia Game</h1>
+                </div>
+                <div class="row">
+                    <div class="start-btn">Start</div>
+                </div>
+            </div>
+
+            <div class="row questions-page">
+                <div class='timer text-left col-sm-3'></div>
+                <div class="question col-sm-6"></div>
+                <div class='score text-right col-sm-3'>
+                    <div class="right"></div>
+                    <div class="wrong"></div>
+                </div>
+            </div>
+            <div class="row answers"></div>
+            <div class="row reset-button"></div>
+        </div>
+    </div>
+    <div class="footer">
+        <p class="footer-text">&copy;Copyright Miguel Villegas</p>
+    </div>
+    <script>
+        src = "/assets/javascript/app.js"
+    </script>
 </body>
 
 </html>
