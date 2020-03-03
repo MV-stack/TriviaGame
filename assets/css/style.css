@@ -22,6 +22,10 @@ body {
     text-align: center;
     height: 25px;
 }
+.main{
+    background-color: antiquewhite;
+    color: black;
+}
 
 @media screen and (max-width: 980px){
     

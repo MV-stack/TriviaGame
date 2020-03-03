@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<scr>, initial-scale=1.0">
+    <title>Document</title>
+       <!-- jQuery library -->
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="item"></div>
+    <script>
+        console.log("connected")
+        var fruits = ["apple","mango","orange"]
+        //var something = $('<input/>').attr({ type: 'button', name:'btn1', value:'a button',class: "answerButton" });
+        // $("#item").append(something);
+        for(i= 0; i < fruits.length; i++) {
+            console.log(i)
+            $("#item").append($('<input/>').attr({ type: 'button', name:'btn1', value:fruits[i],class: "answerButton" }))
+        }
+    </script>
+</body>
+</html>
