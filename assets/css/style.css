@@ -12,6 +12,33 @@ body {
     padding: 110px;        
 }
 
+.start-btn {
+    display: block;
+    font-size: 50px;
+    color: #0c0c0b;
+    text-align: center;
+}
+
+.title {
+    display: block;
+    font-size: 80px;
+    color: #1d0606;
+    text-shadow: 2px 2px #bb5b01;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.timer{
+    display: block;
+    font-size: 30px;
+    color: #1a1a04c1;
+    text-align: center;
+}
+
+.question {
+    display: block;
+}
+
 .footer {
     position: fixed;
     left: 0;

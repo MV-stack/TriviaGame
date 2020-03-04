@@ -1,13 +1,14 @@
 $(document).ready(function () {
   //Declare global variables
-  var game;
+  //var game;
   var counter = 30;
   var clock;
-  var timer = 20;
+  //var timer = 20;
   var correctCounter = 0;
   var incorrectCounter = 0;
   var unansweredCounter = 0;
-  var currentQuestionIndex = 0
+  var currentQuestionIndex = 0;
+  var countDownInterval;
 
   //Trivia questions and answers
 
@@ -41,12 +42,12 @@ $(document).ready(function () {
       correctAnswer: "Frog"
     }
   ]
-
+  
   //Game start
   function startGame() {
     console.log("counter: " + counter)
     $("#time-left").html(counter);
-    setInterval(countDown, 1000);
+    countDownInterval = setInterval(countDown, 1000);
     $(".start-btn").hide();
     $(".question").html("<h2>" + questions[currentQuestionIndex].question + "</h2>")
     for (i = 0; i < questions[currentQuestionIndex].answers.length; i++) {
@@ -60,21 +61,28 @@ $(document).ready(function () {
     }
   }
 
+  //Timer function///
   function countDown() {
-
-    this.counter--;
+    counter--;
     $("#time-left").text(counter);
     if (counter === 0) {
       console.log("Times up");
-      timer();
+     clearInterval(countDownInterval);
     }
   }
+  
   $("answers").css("visibility", "hidden");
   $("body").on("click", ".start-btn", function (event) {
     event.preventDefault();
     startGame();
+    $( ".answerButton" ).click(answerClick);
+
+  
     $(".answers").css("visbility", "visible");
   });
+  function answerClick() {
+    //pseudo code - record answer and move onto next question
+  }
   $("body").on("click", "answer", function (event) {
     chosenAnswer = $(this).text();
     var answerCounter = questions[counter].answers;
@@ -95,4 +103,3 @@ $(document).ready(function () {
 
   });
 });
-console.log("connected")
