@@ -42,7 +42,7 @@ function nextQuestion() {
     var isQuestionOver = (triviaQuestions.length - 1) === currentQuestion;
     if (isQuestionOver) {
         
-        console.log('Game Over!');
+        //console.log();
         displayResult();
     } else {
         currentQuestion++;
@@ -94,19 +94,18 @@ function loadanswers(answers) {
     return result;
 }
 
-$(document).on('click', '.answer', function() {
-    console.log('AAAAAAAAAAAHHHHHHH');
+$(document).on('click', '.answer', function() {    
     clearInterval(timer);
     var selectedAnswer = $(this).attr('data-answer');
     var correctAnswer = triviaQuestions[currentQuestion].correctAnswer;
 
     if (correctAnswer === selectedAnswer) {
         score++;
-        console.log('Correct!');        
+        //console.log();        
         setTimeout(nextQuestion, 3 * 1000);
     } else {
         lost++;
-        console.log('Wrong!');       
+        //console.log();       
         setTimeout(nextQuestion, 3 * 1000);
     }
 });
@@ -114,8 +113,8 @@ $(document).on('click', '.answer', function() {
 function displayResult() {
     var result = `
         <p>You got ${score} questions(s) right</p>
-        <p>You missed ${lost} questions(s)</p>
-        <p>Total questions ${triviaQuestions.length} questions(s) right</p>
+        <p>You got ${lost} questions(s) wrong</p>
+        <p>Total questions ${triviaQuestions.length}</p>
         <button class="start-btn" id="reset">Reset Game</button>
     `;
 

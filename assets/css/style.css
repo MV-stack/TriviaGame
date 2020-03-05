@@ -14,9 +14,18 @@ body {
 
 .start-btn {
     display: block;
-    font-size: 50px;
+    font-size: auto;
     color: #0c0c0b;
     text-align: center;
+}
+
+#reset {
+    margin: 0 auto;
+}
+h4 {
+    font-weight: bold;
+    padding: 10px;
+    
 }
 
 .title {
