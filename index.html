@@ -15,38 +15,25 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
-    <!-- JUMBOTRON -->
-    <div class="jumbotron col-sm-12 "></div>
-<!-- End Jumbotron -->
-    <div class="container">
+<body>    
+    <div class="container">        
+    <div class="jumbotron col-sm-12 "></div>    
         <div class="main">
             <div class="row start-page">
                 <div class="title">Jurassic Park Trivia Game</div>
                     <div class="start-btn">Start</div>
                     <div class="timer">
-                        <h2>Time left: <span id="time-left"></span></h2>
+                        <h2>Time left: <span id="time"></span></h2>
+                        <div id="game"></div>
                     </div>
                 </div>
             </div>
-
-            <div class="row questions-page">
-                <div class='timer text-left col-sm-3'></div>
-                <div class="question col-sm-6"></div>
-                <div class='score text-right col-sm-3'>
-                    <div class="right"></div>
-                    <div class="wrong"></div>
-                </div>
-            </div>
-            <div class="row answers"></div>
-            <div class="row reset-button"></div>
         </div>
     </div>
     <div class="footer">
         <p class="footer-text">&copy;Copyright Miguel Villegas</p>
     </div>
-    <script
-        src = "/assets/javascript/app.js" ></script>
+    <script src = "assets/javascript/app.js"></script>
     </script>
 </body>
 
